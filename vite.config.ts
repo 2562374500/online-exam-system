@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: './',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -13,8 +14,6 @@ export default defineConfig({
   build: {
     outDir: 'docs',
     assetsDir: 'assets',
-    // 修改 base，适配 GitHub Pages
-    base: './',
     minify: 'terser',
     terserOptions: {
       compress: {

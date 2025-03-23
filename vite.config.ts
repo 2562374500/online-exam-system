@@ -21,6 +21,13 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vue-vendor': ['vue', 'vue-router'],
+        },
+      },
+    },
   },
   server: {
     port: 3000,

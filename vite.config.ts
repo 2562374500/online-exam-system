@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/online-exam-system/',
+  base: 'https://cdn.jsdelivr.net/gh/2562374500/online-exam-system@master/docs/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
